@@ -27,4 +27,5 @@ Route::group([
 ], function() {
     Route::apiResource('customers', CustomerController::class);
     Route::apiResource('invoices', InvoiceController::class);
+    Route::post('invoices/bulk', ['uses' => 'App\Http\Controllers\Api\V1\InvoiceController@bulkStore']);
 });
